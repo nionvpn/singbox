@@ -18,9 +18,10 @@
       "server_port": 80,
       "uuid": "0bd3722c-8dec-d7e7-de83-aa9818c71319",
       "alter_id": 0,
-      "method": "auto",   // Đổi "cipher" thành "method"
+      "security": "auto",  // Sửa từ "method" thành "security"
       "udp": true,
       "tls": false,
+      "network": "ws",
       "ws_opts": {
         "path": "/5gsieuvip",
         "headers": {
