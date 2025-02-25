@@ -17,7 +17,7 @@
       "server": "Cmc1.5gsieuvip.vn",
       "server_port": 80,
       "uuid": "0bd3722c-8dec-d7e7-de83-aa9818c71319",
-      "alter_id": 0,  // Sửa "alterld" thành "alter_id"
+      "alterId": 0,  // Sửa "alterld" thành "alter_id"
       "cipher": "auto",
       "udp": true,
       "tls": false,
