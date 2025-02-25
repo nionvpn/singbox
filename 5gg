@@ -29,7 +29,7 @@
       },
       "transport": {
         "type": "ws",
-        "udp_over_tcp": true  // Thay vì "udp": true
+        "udp_over_tcp": true  
       }
     }
   ]
