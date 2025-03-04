@@ -1,32 +1,14 @@
-{
-  "log": {
-    "level": "info",
-    "timestamp": true
-  },
-  "inbounds": [
-    {
-      "type": "socks",
-      "listen": "127.0.0.1",
-      "listen_port": 1080
-    }
-  ],
-  "outbounds": [
-    {
-      "tag": "[1]› CMC 1 [ Vmess ]",
-      "type": "vmess",
-      "server": "Cmc1.5gsieuvip.vn",
-      "server_port": 80,
-      "uuid": "0bd3722c-8dec-d7e7-de83-aa9818c71319",
-      "alter_id": 0,
-      "security": "auto",
-      "tls": false,
-      "transport": {
-        "type": "ws",
-        "path": "/5gsieuvip",
-        "headers": {
-          "Host": "m.tiktok.com"
-        }
-      }
-    }
-  ]
-}
+vmess://YXV0bzpiZWMwMjNkYi02YWFmLTQ4OWItOGRjMC1kZmFlNmQzNzI4ZmRAY2x1Yi50YWk0Zy52bjo4MA?remarks=%5B1%5D%E2%80%BA%20%F0%9F%87%BB%F0%9F%87%B3CLUB%F0%9F%94%B0&obfsParam=m.tiktok.com&path=/81&obfs=websocket&alterId=0
+vmess://YXV0bzpiZWMwMjNkYi02YWFmLTQ4OWItOGRjMC1kZmFlNmQzNzI4ZmRAY2x1Yi50YWk0Zy52bjo0NDM?remarks=%5B2%5D%E2%80%BA%20%F0%9F%87%BB%F0%9F%87%B3CLUB%E2%9A%A1&obfsParam=m.tiktok.com&path=/82&obfs=websocket&tls=1&peer=m.tiktok.com&allowInsecure=1&alterId=0
+vmess://YXV0bzpiZWMwMjNkYi02YWFmLTQ4OWItOGRjMC1kZmFlNmQzNzI4ZmRAbGluZS50YWk0Zy52bjo4MA?remarks=%5B3%5D%E2%80%BA%20%F0%9F%87%BB%F0%9F%87%B3LINE%F0%9F%94%B0&obfsParam=m.tiktok.com&path=/79&obfs=websocket&alterId=0
+vmess://YXV0bzpiZWMwMjNkYi02YWFmLTQ4OWItOGRjMC1kZmFlNmQzNzI4ZmRAbGluZS50YWk0Zy52bjo0NDM?remarks=%5B4%5D%E2%80%BA%20%F0%9F%87%BB%F0%9F%87%B3LINE%E2%9A%A1&obfsParam=m.tiktok.com&path=/80&obfs=websocket&tls=1&peer=m.tiktok.com&allowInsecure=1&alterId=0
+vmess://YXV0bzpiZWMwMjNkYi02YWFmLTQ4OWItOGRjMC1kZmFlNmQzNzI4ZmRAeC1iYXNpYy50YWk0Zy52bjo4MA?remarks=%5B5%5D%E2%80%BA%20%F0%9F%87%B8%F0%9F%87%ACBASIC%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB&obfsParam=m.tiktok.com&path=/&obfs=websocket&alterId=0
+trojan://bec023db-6aaf-489b-8dc0-dfae6d3728fd@x-basic.tai4g.vn:443?allowInsecure=1&peer=m.tiktok.com#%5B6%5D%E2%80%BA%20%F0%9F%87%B8%F0%9F%87%ACBASIC%E2%9A%A1
+vmess://YXV0bzpiZWMwMjNkYi02YWFmLTQ4OWItOGRjMC1kZmFlNmQzNzI4ZmRAbGl2ZS50YWk0Zy52bjo4MA?remarks=%5B7%5D%E2%80%BA%20%F0%9F%87%BB%F0%9F%87%B3LIVE%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB&obfsParam=m.tiktok.com&path=/&obfs=websocket&alterId=0
+trojan://bec023db-6aaf-489b-8dc0-dfae6d3728fd@live.tai4g.vn:443?allowInsecure=1&peer=m.tiktok.com#%5B8%5D%E2%80%BA%20%F0%9F%87%BB%F0%9F%87%B3LIVE%E2%9A%A1
+vmess://YXV0bzpiZWMwMjNkYi02YWFmLTQ4OWItOGRjMC1kZmFlNmQzNzI4ZmRAY2xvdWQudGFpNGcudm46ODA?remarks=%5B9%5D%E2%80%BA%20%F0%9F%87%BB%F0%9F%87%B3CLOUD%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB&obfsParam=m.tiktok.com&path=/&obfs=websocket&alterId=0
+trojan://bec023db-6aaf-489b-8dc0-dfae6d3728fd@cloud.tai4g.vn:443?allowInsecure=1&peer=m.tiktok.com#%5B10%5D%E2%80%BA%20%F0%9F%87%BB%F0%9F%87%B3CLOUD%E2%9A%A1
+vmess://YXV0bzpiZWMwMjNkYi02YWFmLTQ4OWItOGRjMC1kZmFlNmQzNzI4ZmRAY3lwZXIudGFpNGcudm46ODA?remarks=%5B11%5D%E2%80%BA%20%F0%9F%87%BB%F0%9F%87%B3CYPER%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB&obfsParam=m.tiktok.com&path=/&obfs=websocket&alterId=0
+trojan://bec023db-6aaf-489b-8dc0-dfae6d3728fd@cyper.tai4g.vn:443?allowInsecure=1&peer=m.tiktok.com#%5B12%5D%E2%80%BA%20%F0%9F%87%BB%F0%9F%87%B3CYPER%E2%9A%A1
+vmess://YXV0bzpiZWMwMjNkYi02YWFmLTQ4OWItOGRjMC1kZmFlNmQzNzI4ZmRAZXh0cmEudGFpNGcudm46ODA?remarks=%5B13%5D%E2%80%BA%20%F0%9F%87%BB%F0%9F%87%B3EXTRA%F0%9F%91%A8%E2%80%8D%F0%9F%92%BB&obfsParam=m.tiktok.com&path=/&obfs=websocket&alterId=0
+trojan://bec023db-6aaf-489b-8dc0-dfae6d3728fd@extra.tai4g.vn:443?allowInsecure=1&peer=m.tiktok.com#%5B14%5D%E2%80%BA%20%F0%9F%87%BB%F0%9F%87%B3EXTRA%E2%9A%A1
