@@ -1,1 +1,300 @@
-{"log":{"level":"info","timestamp":true},"dns":{"servers":[{"tag":"proxyDns","address":"8.8.8.8","detour":"L\u1ef1a ch\u1ecdn n\u00fat"},{"tag":"localDns","address":"local","strategy":"ipv4_only","detour":"direct"},{"tag":"block","address":"rcode:\/\/success"}],"rules":[{"outbound":"any","server":"localDns","disable_cache":true},{"query_type":["A","AAAA"],"server":"L\u1ef1a ch\u1ecdn n\u00fat"}],"independent_cache":true,"strategy":"ipv4_only"},"route":{"auto_detect_interface":true,"override_android_vpn":true,"final":"L\u1ef1a ch\u1ecdn n\u00fat","rules":[{"protocol":"dns","outbound":"dns-out"},{"inbound":["dns-in"],"outbound":"dns-out"},{"outbound":"dns-out","port":[53]},{"ip_cidr":["224.0.0.0\/3","ff00::\/8"],"outbound":"block","source_ip_cidr":["224.0.0.0\/3","ff00::\/8"]}]},"inbounds":[{"type":"tun","tag":"tun-in","interface_name":"tun0","inet4_address":"172.19.0.1\/30","inet6_address":"2001:0470:f9da:fdfa::1\/64","mtu":9000,"auto_route":true,"strict_route":true,"stack":"system","endpoint_independent_nat":true,"sniff":true,"sniff_override_destination":true,"domain_strategy":"prefer_ipv4"},{"domain_strategy":"prefer_ipv4","listen":"127.0.0.1","listen_port":2333,"sniff":true,"sniff_override_destination":true,"tag":"socks-in","type":"socks","users":[]},{"domain_strategy":"prefer_ipv4","listen":"127.0.0.1","listen_port":2334,"sniff":true,"sniff_override_destination":true,"tag":"mixed-in","type":"mixed","users":[]}],"experimental":{"cache_file":{"enabled":true,"path":"","cache_id":"","store_fakeip":false},"clash_api":{"external_controller":"127.0.0.1:9090","secret":""}},"outbounds":[{"tag":"L\u1ef1a ch\u1ecdn n\u00fat","type":"selector","default":"AikoPanel","outbounds":["AikoPanel","\ud83d\udd30 ID: 63041","\ud83d\udcc5 07-03-2025 | 18:00:12 \u23f2","\ud83d\udd30 SNI: TikTok","[1]\u203a \ud83c\uddfb\ud83c\uddf3LOADIP\ud83d\udc68\u200d\ud83d\udcbb","[2]\u203a \ud83c\uddfb\ud83c\uddf3LOADIP\u26a1","[3]\u203a \ud83c\uddfb\ud83c\uddf3LIVE\ud83d\udc68\u200d\ud83d\udcbb","[4]\u203a \ud83c\uddfb\ud83c\uddf3LIVE\u26a1","[5]\u203a \ud83c\uddf0\ud83c\uddf7KOREAN [1]\ud83d\udc68\u200d\ud83d\udcbb","[6]\u203a \ud83c\uddf0\ud83c\uddf7KOREAN [2]\u26a1","[7]\u203a \ud83c\uddef\ud83c\uddf5JP & TW [1]\ud83d\udc68\u200d\ud83d\udcbb","[8]\u203a \ud83c\uddef\ud83c\uddf5JP & TW [2]\u26a1","[9]\u203a \ud83c\uddef\ud83c\uddf5JP & TW [3]\ud83d\udc68\u200d\ud83d\udcbb","[10]\u203a \ud83c\uddef\ud83c\uddf5JP & TW [4]\u26a1","[11]\u203a \ud83c\uddef\ud83c\uddf5JP & TW [5]\ud83d\udc68\u200d\ud83d\udcbb","[12]\u203a \ud83c\uddef\ud83c\uddf5JP & TW [6]\u26a1"]},{"tag":"\ud83d\udd30 ID: 63041","type":"vmess","server":"103.182.18.190","server_port":80,"uuid":"2d22c476-b590-49d0-88a5-3d59ccbea45d","security":"auto","alter_id":0,"transport":{"type":"ws","path":"\/","headers":{"Host":"m.tiktok.com"},"max_early_data":2048,"early_data_header_name":"Sec-WebSocket-Protocol"}},{"tag":"\ud83d\udcc5 07-03-2025 | 18:00:12 \u23f2","type":"vmess","server":"103.10.69.49","server_port":80,"uuid":"2d22c476-b590-49d0-88a5-3d59ccbea45d","security":"auto","alter_id":0,"transport":{"type":"ws","path":"\/","headers":{"Host":"m.tiktok.com"},"max_early_data":2048,"early_data_header_name":"Sec-WebSocket-Protocol"}},{"tag":"\ud83d\udd30 SNI: TikTok","type":"vmess","server":"103.182.18.53","server_port":80,"uuid":"2d22c476-b590-49d0-88a5-3d59ccbea45d","security":"auto","alter_id":0,"transport":{"type":"ws","path":"\/","headers":{"Host":"m.tiktok.com"},"max_early_data":2048,"early_data_header_name":"Sec-WebSocket-Protocol"}},{"tag":"[1]\u203a \ud83c\uddfb\ud83c\uddf3LOADIP\ud83d\udc68\u200d\ud83d\udcbb","type":"vmess","server":"103.182.18.176","server_port":80,"uuid":"2d22c476-b590-49d0-88a5-3d59ccbea45d","security":"auto","alter_id":0,"transport":{"type":"ws","path":"\/","headers":{"Host":"m.tiktok.com"},"max_early_data":2048,"early_data_header_name":"Sec-WebSocket-Protocol"}},{"tag":"[2]\u203a \ud83c\uddfb\ud83c\uddf3LOADIP\u26a1","type":"trojan","server":"103.10.69.49","server_port":443,"password":"2d22c476-b590-49d0-88a5-3d59ccbea45d","tls":{"enabled":true,"insecure":true,"server_name":"m.tiktok.com"}},{"tag":"[3]\u203a \ud83c\uddfb\ud83c\uddf3LIVE\ud83d\udc68\u200d\ud83d\udcbb","type":"vmess","server":"103.10.69.28","server_port":80,"uuid":"2d22c476-b590-49d0-88a5-3d59ccbea45d","security":"auto","alter_id":0,"transport":{"type":"ws","path":"\/","headers":{"Host":"m.tiktok.com"},"max_early_data":2048,"early_data_header_name":"Sec-WebSocket-Protocol"}},{"tag":"[4]\u203a \ud83c\uddfb\ud83c\uddf3LIVE\u26a1","type":"trojan","server":"103.10.69.28","server_port":443,"password":"2d22c476-b590-49d0-88a5-3d59ccbea45d","tls":{"enabled":true,"insecure":true,"server_name":"m.tiktok.com"}},{"tag":"[5]\u203a \ud83c\uddf0\ud83c\uddf7KOREAN [1]\ud83d\udc68\u200d\ud83d\udcbb","type":"vmess","server":"64.176.226.171","server_port":80,"uuid":"2d22c476-b590-49d0-88a5-3d59ccbea45d","security":"auto","alter_id":0,"transport":{"type":"ws","path":"\/","headers":{"Host":"m.tiktok.com"},"max_early_data":2048,"early_data_header_name":"Sec-WebSocket-Protocol"}},{"tag":"[6]\u203a \ud83c\uddf0\ud83c\uddf7KOREAN [2]\u26a1","type":"trojan","server":"64.176.226.171","server_port":443,"password":"2d22c476-b590-49d0-88a5-3d59ccbea45d","tls":{"enabled":true,"insecure":true,"server_name":"m.tiktok.com"}},{"tag":"[7]\u203a \ud83c\uddef\ud83c\uddf5JP & TW [1]\ud83d\udc68\u200d\ud83d\udcbb","type":"vmess","server":"198.13.41.109","server_port":80,"uuid":"2d22c476-b590-49d0-88a5-3d59ccbea45d","security":"auto","alter_id":0,"transport":{"type":"ws","path":"\/","headers":{"Host":"m.tiktok.com"},"max_early_data":2048,"early_data_header_name":"Sec-WebSocket-Protocol"}},{"tag":"[8]\u203a \ud83c\uddef\ud83c\uddf5JP & TW [2]\u26a1","type":"trojan","server":"198.13.41.109","server_port":443,"password":"2d22c476-b590-49d0-88a5-3d59ccbea45d","tls":{"enabled":true,"insecure":true,"server_name":"m.tiktok.com"}},{"tag":"[9]\u203a \ud83c\uddef\ud83c\uddf5JP & TW [3]\ud83d\udc68\u200d\ud83d\udcbb","type":"vmess","server":"160.16.52.60","server_port":80,"uuid":"2d22c476-b590-49d0-88a5-3d59ccbea45d","security":"auto","alter_id":0,"transport":{"type":"ws","path":"\/62","headers":{"Host":"m.tiktok.com"},"max_early_data":2048,"early_data_header_name":"Sec-WebSocket-Protocol"}},{"tag":"[10]\u203a \ud83c\uddef\ud83c\uddf5JP & TW [4]\u26a1","type":"vmess","server":"160.16.52.60","server_port":443,"uuid":"2d22c476-b590-49d0-88a5-3d59ccbea45d","security":"auto","alter_id":0,"transport":{"type":"ws","path":"\/63","headers":{"Host":"m.tiktok.com"},"max_early_data":2048,"early_data_header_name":"Sec-WebSocket-Protocol"},"tls":{"enabled":true,"insecure":true,"server_name":"m.tiktok.com"}},{"tag":"[11]\u203a \ud83c\uddef\ud83c\uddf5JP & TW [5]\ud83d\udc68\u200d\ud83d\udcbb","type":"vmess","server":"153.121.32.49","server_port":80,"uuid":"2d22c476-b590-49d0-88a5-3d59ccbea45d","security":"auto","alter_id":0,"transport":{"type":"ws","path":"\/72","headers":{"Host":"m.tiktok.com"},"max_early_data":2048,"early_data_header_name":"Sec-WebSocket-Protocol"}},{"tag":"[12]\u203a \ud83c\uddef\ud83c\uddf5JP & TW [6]\u26a1","type":"vmess","server":"153.121.32.49","server_port":443,"uuid":"2d22c476-b590-49d0-88a5-3d59ccbea45d","security":"auto","alter_id":0,"transport":{"type":"ws","path":"\/73","headers":{"Host":"m.tiktok.com"},"max_early_data":2048,"early_data_header_name":"Sec-WebSocket-Protocol"},"tls":{"enabled":true,"insecure":true,"server_name":"m.tiktok.com"}},{"tag":"direct","type":"direct"},{"tag":"block","type":"block"},{"tag":"dns-out","type":"dns"},{"tag":"AikoPanel","type":"urltest","outbounds":["\ud83d\udd30 ID: 63041","\ud83d\udcc5 07-03-2025 | 18:00:12 \u23f2","\ud83d\udd30 SNI: TikTok","[1]\u203a \ud83c\uddfb\ud83c\uddf3LOADIP\ud83d\udc68\u200d\ud83d\udcbb","[2]\u203a \ud83c\uddfb\ud83c\uddf3LOADIP\u26a1","[3]\u203a \ud83c\uddfb\ud83c\uddf3LIVE\ud83d\udc68\u200d\ud83d\udcbb","[4]\u203a \ud83c\uddfb\ud83c\uddf3LIVE\u26a1","[5]\u203a \ud83c\uddf0\ud83c\uddf7KOREAN [1]\ud83d\udc68\u200d\ud83d\udcbb","[6]\u203a \ud83c\uddf0\ud83c\uddf7KOREAN [2]\u26a1","[7]\u203a \ud83c\uddef\ud83c\uddf5JP & TW [1]\ud83d\udc68\u200d\ud83d\udcbb","[8]\u203a \ud83c\uddef\ud83c\uddf5JP & TW [2]\u26a1","[9]\u203a \ud83c\uddef\ud83c\uddf5JP & TW [3]\ud83d\udc68\u200d\ud83d\udcbb","[10]\u203a \ud83c\uddef\ud83c\uddf5JP & TW [4]\u26a1","[11]\u203a \ud83c\uddef\ud83c\uddf5JP & TW [5]\ud83d\udc68\u200d\ud83d\udcbb","[12]\u203a \ud83c\uddef\ud83c\uddf5JP & TW [6]\u26a1"]}]}
+{
+    "log": {
+        "level": "info",
+        "timestamp": true
+    },
+    "dns": {
+        "servers": [
+            {
+                "tag": "proxyDns",
+                "address": "8.8.8.8",
+                "detour": "L\u1ef1a ch\u1ecdn n\u00fat"
+            },
+            {
+                "tag": "localDns",
+                "address": "local",
+                "strategy": "ipv4_only",
+                "detour": "direct"
+            },
+            {
+                "tag": "block",
+                "address": "rcode:\/\/success"
+            }
+        ],
+        "rules": [
+            {
+                "outbound": "any",
+                "server": "localDns",
+                "disable_cache": true
+            },
+            {
+                "query_type": [
+                    "A",
+                    "AAAA"
+                ],
+                "server": "L\u1ef1a ch\u1ecdn n\u00fat"
+            }
+        ],
+        "independent_cache": true,
+        "strategy": "ipv4_only"
+    },
+    "route": {
+        "auto_detect_interface": true,
+        "override_android_vpn": true,
+        "final": "L\u1ef1a ch\u1ecdn n\u00fat",
+        "rules": [
+            {
+                "protocol": "dns",
+                "outbound": "dns-out"
+            },
+            {
+                "inbound": [
+                    "dns-in"
+                ],
+                "outbound": "dns-out"
+            },
+            {
+                "outbound": "dns-out",
+                "port": [
+                    53
+                ]
+            },
+            {
+                "ip_cidr": [
+                    "224.0.0.0\/3",
+                    "ff00::\/8"
+                ],
+                "outbound": "block",
+                "source_ip_cidr": [
+                    "224.0.0.0\/3",
+                    "ff00::\/8"
+                ]
+            }
+        ]
+    },
+    "inbounds": [
+        {
+            "type": "tun",
+            "tag": "tun-in",
+            "interface_name": "tun0",
+            "inet4_address": "172.19.0.1\/30",
+            "inet6_address": "2001:0470:f9da:fdfa::1\/64",
+            "mtu": 9000,
+            "auto_route": true,
+            "strict_route": true,
+            "stack": "system",
+            "endpoint_independent_nat": true,
+            "sniff": true,
+            "sniff_override_destination": true,
+            "domain_strategy": "prefer_ipv4"
+        },
+        {
+            "domain_strategy": "prefer_ipv4",
+            "listen": "127.0.0.1",
+            "listen_port": 2333,
+            "sniff": true,
+            "sniff_override_destination": true,
+            "tag": "socks-in",
+            "type": "socks",
+            "users": []
+        },
+        {
+            "domain_strategy": "prefer_ipv4",
+            "listen": "127.0.0.1",
+            "listen_port": 2334,
+            "sniff": true,
+            "sniff_override_destination": true,
+            "tag": "mixed-in",
+            "type": "mixed",
+            "users": []
+        }
+    ],
+    "experimental": {
+        "cache_file": {
+            "enabled": true,
+            "path": "",
+            "cache_id": "",
+            "store_fakeip": false
+        },
+        "clash_api": {
+            "external_controller": "127.0.0.1:9090",
+            "secret": ""
+        }
+    },
+    "outbounds": [
+        {
+            "tag": "L\u1ef1a ch\u1ecdn n\u00fat",
+            "type": "selector",
+            "default": "AikoPanel",
+            "outbounds": [
+                "AikoPanel",
+                "\ud83d\udd30 ID: 2005",
+                "D\u00f9ng: Hoàng Nam",
+                "\ud83d\udd30 Dev Hoang Nam",
+                "\ud83d\udd30 SNI: Youtube",
+                "[1]\u203a Viettel n\u1ec1n m\u1edbi [1]",
+                "[2]\u203a Viettel N\u1ec1n M\u1edbi [2]",
+                "[3]\u203a Viettel N\u1ec1n M\u1edbi [3]",
+                "[4]\u203a Viettel N\u1ec1n M\u1edbi [4]",
+            ]
+        },
+        {
+            "tag": "\ud83d\udd30 ID: 2005",
+            "type": "vmess",
+            "server": "34.80.21.149",
+            "server_port": 80,
+            "uuid": "4dcc47da-c35b-4582-87f4-825113b4c309",
+            "security": "auto",
+            "alter_id": 0,
+            "transport": {
+                "type": "ws",
+                "path": "\/xvpn.vn",
+                "headers": {
+                    "Host": "m.youtube.com"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "D\u00f9ng: Hoàng Nam",
+            "type": "vmess",
+            "server": "34.80.21.149",
+            "server_port": 80,
+            "uuid": "4dcc47da-c35b-4582-87f4-825113b4c309",
+            "security": "auto",
+            "alter_id": 0,
+            "transport": {
+                "type": "ws",
+                "path": "\/xvpn.vn",
+                "headers": {
+                    "Host": "m.youtube.com"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "\ud83d\udd30 Dev Hoang Nam",
+            "type": "vmess",
+            "server": "34.80.21.149",
+            "server_port": 80,
+            "uuid": "4dcc47da-c35b-4582-87f4-825113b4c309",
+            "security": "auto",
+            "alter_id": 0,
+            "transport": {
+                "type": "ws",
+                "path": "\/xvpn.vn",
+                "headers": {
+                    "Host": "m.youtube.com"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "\ud83d\udd30 SNI: Youtube",
+            "type": "vmess",
+            "server": "34.80.21.149",
+            "server_port": 80,
+            "uuid": "4dcc47da-c35b-4582-87f4-825113b4c309",
+            "security": "auto",
+            "alter_id": 0,
+            "transport": {
+                "type": "ws",
+                "path": "\/xvpn.vn",
+                "headers": {
+                    "Host": "m.youtube.com"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "[1]\u203a Viettel n\u1ec1n m\u1edbi [1]",
+            "type": "vmess",
+            "server": "34.80.21.149",
+            "server_port": 80,
+            "uuid": "4dcc47da-c35b-4582-87f4-825113b4c309",
+            "security": "auto",
+            "alter_id": 0,
+            "transport": {
+                "type": "ws",
+                "path": "\/xvpn.vn",
+                "headers": {
+                    "Host": "m.youtube.com"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "[2]\u203a Viettel N\u1ec1n M\u1edbi [2]",
+            "type": "trojan",
+            "server": "34.80.21.149",
+            "server_port": 443,
+            "password": "4dcc47da-c35b-4582-87f4-825113b4c309",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "m.youtube.com"
+            }
+        },
+        {
+            "tag": "[3]\u203a Viettel N\u1ec1n M\u1edbi [3]",
+            "type": "vmess",
+            "server": "35.236.170.173",
+            "server_port": 80,
+            "uuid": "4dcc47da-c35b-4582-87f4-825113b4c309",
+            "security": "auto",
+            "alter_id": 0,
+            "transport": {
+                "type": "ws",
+                "path": "\/xvpn.vn",
+                "headers": {
+                    "Host": "m.youtube.com"
+                },
+                "max_early_data": 2048,
+                "early_data_header_name": "Sec-WebSocket-Protocol"
+            }
+        },
+        {
+            "tag": "[4]\u203a Viettel N\u1ec1n M\u1edbi [4]",
+            "type": "trojan",
+            "server": "35.236.170.173",
+            "server_port": 443,
+            "password": "4dcc47da-c35b-4582-87f4-825113b4c309",
+            "tls": {
+                "enabled": true,
+                "insecure": true,
+                "server_name": "m.youtube.com"
+            }
+        },
+        {
+            "tag": "direct",
+            "type": "direct"
+        },
+        {
+            "tag": "block",
+            "type": "block"
+        },
+        {
+            "tag": "dns-out",
+            "type": "dns"
+        },
+        {
+            "tag": "AikoPanel",
+            "type": "urltest",
+            "outbounds": [
+                "\ud83d\udd30 ID: 2005",
+                "D\u00f9ng: Hoàng Nam",
+                "\ud83d\udd30 Dev Hoang Nam",
+                "\ud83d\udd30 SNI: Youtube",
+                "[1]\u203a Viettel n\u1ec1n m\u1edbi [1]",
+                "[2]\u203a Viettel N\u1ec1n M\u1edbi [2]",
+                "[3]\u203a Viettel N\u1ec1n M\u1edbi [3]",
+                "[4]\u203a Viettel N\u1ec1n M\u1edbi [4]",
+            ]
+        }
+    ]
+}
