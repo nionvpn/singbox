@@ -1,1 +1,240 @@
-{"log":{"level":"info","timestamp":true},"dns":{"servers":[{"tag":"proxyDns","address":"8.8.8.8","detour":"L\u1ef1a ch\u1ecdn n\u00fat"},{"tag":"localDns","address":"local","strategy":"ipv4_only","detour":"direct"},{"tag":"block","address":"rcode:\/\/success"}],"rules":[{"outbound":"any","server":"localDns","disable_cache":true},{"query_type":["A","AAAA"],"server":"L\u1ef1a ch\u1ecdn n\u00fat"}],"independent_cache":true,"strategy":"ipv4_only"},"route":{"auto_detect_interface":true,"override_android_vpn":true,"final":"L\u1ef1a ch\u1ecdn n\u00fat","rules":[{"protocol":"dns","outbound":"dns-out"},{"inbound":["dns-in"],"outbound":"dns-out"},{"outbound":"dns-out","port":[53]},{"ip_cidr":["224.0.0.0\/3","ff00::\/8"],"outbound":"block","source_ip_cidr":["224.0.0.0\/3","ff00::\/8"]}]},"inbounds":[{"type":"tun","tag":"tun-in","interface_name":"tun0","inet4_address":"172.19.0.1\/30","inet6_address":"2001:0470:f9da:fdfa::1\/64","mtu":9000,"auto_route":true,"strict_route":true,"stack":"system","endpoint_independent_nat":true,"sniff":true,"sniff_override_destination":true,"domain_strategy":"prefer_ipv4"},{"domain_strategy":"prefer_ipv4","listen":"127.0.0.1","listen_port":2333,"sniff":true,"sniff_override_destination":true,"tag":"socks-in","type":"socks","users":[]},{"domain_strategy":"prefer_ipv4","listen":"127.0.0.1","listen_port":2334,"sniff":true,"sniff_override_destination":true,"tag":"mixed-in","type":"mixed","users":[]}],"experimental":{"cache_file":{"enabled":true,"path":"","cache_id":"","store_fakeip":false},"clash_api":{"external_controller":"127.0.0.1:9090","secret":""}},"outbounds":[{"tag":"L\u1ef1a ch\u1ecdn n\u00fat","type":"selector","default":"DevHoangNam","outbounds":["DevHoangNam","[1]\u203a Viettel N\u1ec1n M\u1edbi [Fast]","[2]\u203a Viettel N\u1ec1n M\u1edbi [VN]"]},{"tag":"[1]\u203a Viettel N\u1ec1n M\u1edbi [Fast]","type":"shadowsocks","server":"35.240.168.185","server_port":31277,"method":"chacha20-ietf-poly1305","password":"4dcc47da-c35b-4582-87f4-825113b4c309"},{"tag":"[2]\u203a Viettel N\u1ec1n M\u1edbi [VN]","type":"shadowsocks","server":"35.198.208.36","server_port":31233,"method":"chacha20-ietf-poly1305","password":"4dcc47da-c35b-4582-87f4-825113b4c309"},{"tag":"direct","type":"direct"},{"tag":"block","type":"block"},{"tag":"dns-out","type":"dns"},{"tag":"DevHoangNam","type":"urltest","outbounds":["[1]\u203a Viettel N\u1ec1n M\u1edbi [Fast]","[2]\u203a Viettel N\u1ec1n M\u1edbi [VN]"]}]}
+{
+	"log": {
+		"level": "info",
+		"timestamp": true
+	},
+	"dns": {
+		"servers": [
+			{
+				"tag": "proxyDns",
+				"address": "8.8.8.8",
+				"detour": "L\u1ef1a ch\u1ecdn n\u00fat"
+			},
+			{
+				"tag": "localDns",
+				"address": "local",
+				"strategy": "ipv4_only",
+				"detour": "direct"
+			},
+			{
+				"tag": "block",
+				"address": "rcode:\/\/success"
+			}
+		],
+		"rules": [
+			{
+				"outbound": "any",
+				"server": "localDns",
+				"disable_cache": true
+			},
+			{
+				"query_type": [
+					"A",
+					"AAAA"
+				],
+				"server": "L\u1ef1a ch\u1ecdn n\u00fat"
+			}
+		],
+		"independent_cache": true,
+		"strategy": "ipv4_only"
+	},
+	"route": {
+		"auto_detect_interface": true,
+		"override_android_vpn": true,
+		"final": "L\u1ef1a ch\u1ecdn n\u00fat",
+		"rules": [
+			{
+				"protocol": "dns",
+				"outbound": "dns-out"
+			},
+			{
+				"inbound": [
+					"dns-in"
+				],
+				"outbound": "dns-out"
+			},
+			{
+				"outbound": "dns-out",
+				"port": [
+					53
+				]
+			},
+			{
+				"ip_cidr": [
+					"224.0.0.0\/3",
+					"ff00::\/8"
+				],
+				"outbound": "block",
+				"source_ip_cidr": [
+					"224.0.0.0\/3",
+					"ff00::\/8"
+				]
+			}
+		]
+	},
+	"inbounds": [
+		{
+			"type": "tun",
+			"tag": "tun-in",
+			"interface_name": "tun0",
+			"inet4_address": "172.19.0.1\/30",
+			"inet6_address": "2001:0470:f9da:fdfa::1\/64",
+			"mtu": 9000,
+			"auto_route": true,
+			"strict_route": true,
+			"stack": "system",
+			"endpoint_independent_nat": true,
+			"sniff": true,
+			"sniff_override_destination": true,
+			"domain_strategy": "prefer_ipv4"
+		},
+		{
+			"domain_strategy": "prefer_ipv4",
+			"listen": "127.0.0.1",
+			"listen_port": 2333,
+			"sniff": true,
+			"sniff_override_destination": true,
+			"tag": "socks-in",
+			"type": "socks",
+			"users": []
+		},
+		{
+			"domain_strategy": "prefer_ipv4",
+			"listen": "127.0.0.1",
+			"listen_port": 2334,
+			"sniff": true,
+			"sniff_override_destination": true,
+			"tag": "mixed-in",
+			"type": "mixed",
+			"users": []
+		}
+	],
+	"experimental": {
+		"cache_file": {
+			"enabled": true,
+			"path": "",
+			"cache_id": "",
+			"store_fakeip": false
+		},
+		"clash_api": {
+			"external_controller": "127.0.0.1:9090",
+			"secret": ""
+		}
+	},
+	"outbounds": [
+		{
+			"tag": "L\u1ef1a ch\u1ecdn n\u00fat",
+			"type": "selector",
+			"default": "AikoPanel",
+			"outbounds": [
+				"AikoPanel",
+				"[1]\u203a \ud83c\uddf8\ud83c\uddecCLOUD [1]",
+				"[2]\u203a \ud83c\uddf8\ud83c\uddecCLOUD [2]",
+				"[3]\u203a \ud83c\uddfb\ud83c\uddf3CLOUD [3]",
+				"[4]\u203a \ud83c\uddfb\ud83c\uddf3CLOUD [4]",
+				"[5]\u203a \ud83c\uddfb\ud83c\uddf3CLOUD [5]",
+				"[6]\u203a \ud83c\uddfb\ud83c\uddf3CLOUD [6]"
+			]
+		},
+		{
+			"tag": "[1]\u203a \ud83c\uddf8\ud83c\uddecCLOUD [1]",
+			"type": "vmess",
+			"server": "34.124.198.127",
+			"server_port": 80,
+			"uuid": "b8a31a8c-dcf1-4941-a61e-9955a8e1eb81",
+			"security": "auto",
+			"alter_id": 0,
+			"transport": {
+				"type": "ws",
+				"path": "\/",
+				"headers": {
+					"Host": "m.youtube.com"
+				},
+				"max_early_data": 2048,
+				"early_data_header_name": "Sec-WebSocket-Protocol"
+			}
+		},
+		{
+			"tag": "[2]\u203a \ud83c\uddf8\ud83c\uddecCLOUD [2]",
+			"type": "trojan",
+			"server": "34.124.198.127",
+			"server_port": 443,
+			"password": "b8a31a8c-dcf1-4941-a61e-9955a8e1eb81",
+			"tls": {
+				"enabled": true,
+				"insecure": true,
+				"server_name": "m.youtube.com"
+			}
+		},
+		{
+			"tag": "[3]\u203a \ud83c\uddfb\ud83c\uddf3CLOUD [3]",
+			"type": "shadowsocks",
+			"server": "34.81.42.120",
+			"server_port": 43255,
+			"method": "chacha20-ietf-poly1305",
+			"password": "b8a31a8c-dcf1-4941-a61e-9955a8e1eb81"
+		},
+		{
+			"tag": "[4]\u203a \ud83c\uddfb\ud83c\uddf3CLOUD [4]",
+			"type": "shadowsocks",
+			"server": "34.81.42.120",
+			"server_port": 1889,
+			"method": "chacha20-ietf-poly1305",
+			"password": "b8a31a8c-dcf1-4941-a61e-9955a8e1eb81"
+		},
+		{
+			"tag": "[5]\u203a \ud83c\uddfb\ud83c\uddf3CLOUD [5]",
+			"type": "vmess",
+			"server": "35.221.224.113",
+			"server_port": 6789,
+			"uuid": "b8a31a8c-dcf1-4941-a61e-9955a8e1eb81",
+			"security": "auto",
+			"alter_id": 0,
+			"transport": {
+				"type": "ws",
+				"path": "\/",
+				"headers": {
+					"Host": "m.youtube.com"
+				},
+				"max_early_data": 2048,
+				"early_data_header_name": "Sec-WebSocket-Protocol"
+			}
+		},
+		{
+			"tag": "[6]\u203a \ud83c\uddfb\ud83c\uddf3CLOUD [6]",
+			"type": "trojan",
+			"server": "35.221.224.113",
+			"server_port": 34567,
+			"password": "b8a31a8c-dcf1-4941-a61e-9955a8e1eb81",
+			"tls": {
+				"enabled": true,
+				"insecure": true,
+				"server_name": "m.youtube.com"
+			}
+		},
+		{
+			"tag": "direct",
+			"type": "direct"
+		},
+		{
+			"tag": "block",
+			"type": "block"
+		},
+		{
+			"tag": "dns-out",
+			"type": "dns"
+		},
+		{
+			"tag": "AikoPanel",
+			"type": "urltest",
+			"outbounds": [
+				"[1]\u203a \ud83c\uddf8\ud83c\uddecCLOUD [1]",
+				"[2]\u203a \ud83c\uddf8\ud83c\uddecCLOUD [2]",
+				"[3]\u203a \ud83c\uddfb\ud83c\uddf3CLOUD [3]",
+				"[4]\u203a \ud83c\uddfb\ud83c\uddf3CLOUD [4]",
+				"[5]\u203a \ud83c\uddfb\ud83c\uddf3CLOUD [5]",
+				"[6]\u203a \ud83c\uddfb\ud83c\uddf3CLOUD [6]"
+			]
+		}
+	]
+}
